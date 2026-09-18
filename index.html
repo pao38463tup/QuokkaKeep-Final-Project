@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuokkaKeep | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="index.html" class="logo tata"> <img src="quokkakeep_cartoon-removebg-preview.png" width="100" height="100" alt="QuokkaKeep">
+            <p>QuokkaKeep</p> </a>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="keep.html">Keep</a>
+            <a href="categories.html">Categories</a>
+            <a href="history.html">History</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="small-title">WELCOME TO</p>
+                <h1>QuokkaKeep </h1>
+
+                <p>
+                    Keep track of everything you borrow and lend.
+                    Never forget a return date again!
+                </p>
+
+                <a href="keep.html" class="button">
+                    + Add a Record
+                </a>
+            </div>
+
+            <div class="koko">
+                
+                <img src="images-removebg-preview.png.png" width="120" height="120" alt="Koko"> <p>Hi! I'm Koko!</p>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section>
+            <h2>Your Overview</h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-card blue">
+                    <span class="stat-icon"><img src="active.png.png" width="60" height="60" alt="Active"></span>
+                    <div>
+                        <p>Active Items</p>
+                        <h3 id="activeCount">3</h3>
+                    </div>
+                </div>
+
+                <div class="stat-card yellow">
+                    <span class="stat-icon"><img src="duesoon.png.png" width="60" height="40" alt="Duesoon"></span>
+                    <div>
+                        <p>Due Soon</p>
+                        <h3 id="dueSoonCount">2</h3>
+                    </div>
+                </div>
+
+                <div class="stat-card red">
+                    <span class="stat-icon"><img src="stack-overdue-bills-unpaid-services-payment-bill-reminder-letter-invoice-debt-final-notice-warning-envelope-past-due-180127059-removebg-preview.png" width="60" height="60" alt="Overdue"></span>
+                    <div>
+                        <p>Overdue</p>
+                        <h3 id="overdueCount">1</h3>
+                    </div>
+                </div>
+
+                <div class="stat-card green">
+                    <span class="stat-icon"><img src="completed-tick.png" width="60" height="60" alt="Completed"></span>
+                    <div>
+                        <p>Completed</p>
+                        <h3 id="completedCount">15</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Koko Message -->
+        <section class="koko-message">
+            <div class="koko-small"> <img src="images-removebg-preview.png.png" width="50" height="50" alt="Koko"> </div>
+
+            <div>
+                <h3>Koko's Reminder</h3>
+                <p>
+                    You have some items that need your attention.
+                    Don't forget to check their return dates!
+                </p>
+            </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section>
+            <div class="section-heading">
+                <h2>Recent Activity</h2>
+                <a href="history.html">View All →</a>
+            </div>
+
+            <div class="activity-list">
+
+                <div class="activity">
+                    <span><img src="book-studycorner-removebg-preview.png.png" width="40" height="40" alt="Book-Studycorner"></span>
+                    <div>
+                        <strong>Returned Mathematics Book</strong>
+                        <p>Today</p>
+                    </div>
+                    <span class="status completed">Completed</span>
+                </div>
+
+                <div class="activity">
+                    <span><img src="ps5-controller-logo-png_seeklogo-373963-removebg-preview.png" width="40" height="40" alt="FunZone"></span>
+                    <div>
+                        <strong>Game Controller</strong>
+                        <p>Due August 15</p>
+                    </div>
+                    <span class="status due">Due Soon</span>
+                </div>
+
+                <div class="activity">
+                    <span><img src="camera.png" width="40" height="30" alt="Camera"></span>
+                    <div>
+                        <strong>Camera</strong>
+                        <p>Due August 10</p>
+                    </div>
+                    <span class="status overdue">Overdue</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><a class="logo tata"><img src="quokkakeep_cartoon-removebg-preview.png" width="35" height="35" alt="QuokkaKeep"></a> QuokkaKeep © 2026 | Made with kindness by Koko</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

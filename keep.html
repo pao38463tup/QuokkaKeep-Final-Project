@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuokkaKeep | Keep</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="index.html" class="logo tata"> <img src="quokkakeep_cartoon-removebg-preview.png" width="100" height="100" alt="QuokkaKeep">
+            <p>QuokkaKeep</p> </a>
+
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="keep.html" class="active">Keep</a>
+            <a href="categories.html">Categories</a>
+            <a href="history.html">History</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div>
+                <p class="small-title">YOUR RECORDS</p>
+                <h1>Borrow & Lending Tracker <img src="box.png" width="60" height="60" alt="Box"></h1>
+                <p>Keep track of things you borrow or lend.</p>
+            </div>
+
+            <button class="button" onclick="showForm()">
+                + Add Record
+            </button>
+        </section>
+
+        <!-- Add Record Form -->
+        <section class="form-card" id="recordForm">
+
+            <div class="section-heading">
+                <h2>Add New Record</h2>
+                <button class="close-button" onclick="hideForm()">×</button>
+            </div>
+
+            <form onsubmit="addRecord(event)">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="itemName">Item Name</label>
+                        <input
+                            type="text"
+                            id="itemName"
+                            placeholder="e.g. Mathematics Book"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">Select category</option>
+                            <option>📚 Study Corner</option>
+                            <option>🎮 Fun Zone</option>
+                            <option>🛠️ Toolbox</option>
+                            <option>💰 Money Matters</option>
+                            <option>🎒 Backpack</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select id="type" required>
+                            <option value="">Select type</option>
+                            <option value="borrowed">I Borrowed</option>
+                            <option value="lent">I Lent</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="person">Person</label>
+                        <input
+                            type="text"
+                            id="person"
+                            placeholder="e.g. Alex"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="borrowDate">Borrow Date</label>
+                        <input
+                            type="date"
+                            id="borrowDate"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="returnDate">Return Date</label>
+                        <input
+                            type="date"
+                            id="returnDate"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="button">
+                    Save Record
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Search -->
+        <section class="search-section">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search your records..."
+                onkeyup="searchRecords()"
+            >
+        </section>
+
+        <!-- Records -->
+        <section>
+
+            <div class="section-heading">
+                <h2>Current Records</h2>
+
+                <select class="filter">
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Due Soon</option>
+                    <option>Overdue</option>
+                    <option>Completed</option>
+                </select>
+            </div>
+
+            <div class="record-grid" id="recordList">
+
+                <!-- Record 1 -->
+                <article class="record-card">
+
+                    <div class="record-top">
+                        <span class="record-icon"><img src="book-studycorner-removebg-preview.png.png" width="60" height="60" alt="Book-Studycorner"></span>
+                        <span class="status active-status">Active</span>
+                    </div>
+
+                    <h3>Mathematics Book</h3>
+
+                    <p>
+                        <strong>From:</strong> Alex
+                    </p>
+
+                    <p>
+                        <strong>Borrowed:</strong> August 10
+                    </p>
+
+                    <p>
+                        <strong>Due:</strong> August 15
+                    </p>
+
+                    <div class="card-actions">
+                        <button class="done-button" onclick="markDone(this)">
+                            ✓ Mark Done
+                        </button>
+
+                        <button class="edit-button" onclick="editRecord(this)">
+                            Edit
+                        </button>
+
+                        <button class="delete-button" onclick="removeRecord(this)">
+                        Remove
+                        </button>
+                    </div>
+
+                </article>
+
+                <!-- Record 2 -->
+                <article class="record-card">
+
+                    <div class="record-top">
+                        <span class="record-icon"><img src="ps5-controller-logo-png_seeklogo-373963-removebg-preview.png" width="60" height="60" alt="FunZone"></span>
+                        <span class="status due">Due Soon</span>
+                    </div>
+
+                    <h3>Game Controller</h3>
+
+                    <p>
+                        <strong>From:</strong> Jamie
+                    </p>
+
+                    <p>
+                        <strong>Borrowed:</strong> August 12
+                    </p>
+
+                    <p>
+                        <strong>Due:</strong> August 15
+                    </p>
+
+                    <div class="card-actions">
+                        <button class="done-button" onclick="markDone(this)">
+                            ✓ Mark Done
+                        </button>
+
+                        <button class="edit-button" onclick="editRecord(this)">
+                            Edit
+                        </button>
+
+                        <button class="delete-button" onclick="removeRecord(this)">
+                        Remove
+                        </button>
+                    </div>
+
+                </article>
+
+                <!-- Record 3 -->
+                <article class="record-card overdue-card">
+
+                    <div class="record-top">
+                        <span class="record-icon"><img src="camera.png" width="55" height="40" alt="Camera"></span>
+                        <span class="status overdue">Overdue</span>
+                    </div>
+
+                    <h3>Camera</h3>
+
+                    <p>
+                        <strong>From:</strong> Sarah
+                    </p>
+
+                    <p>
+                        <strong>Borrowed:</strong> August 1
+                    </p>
+
+                    <p>
+                        <strong>Due:</strong> August 10
+                    </p>
+
+                    <div class="card-actions">
+                        <button class="done-button" onclick="markDone(this)">
+                            ✓ Mark Done
+                        </button>
+
+                        <button class="edit-button" onclick="editRecord(this)">
+                            Edit
+                        </button>
+
+                        <button class="delete-button" onclick="removeRecord(this)">
+                        Remove
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+       <p> <img src="quokkakeep_cartoon-removebg-preview.png" width="30" height="30" alt="QuokkaKeep"> QuokkaKeep © 2026 | Made with kindness by Koko</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+    // Hide the form when the page first loads
+    document.getElementById("recordForm").style.display = "none";
+    </script>
+
+</body>
+</html>

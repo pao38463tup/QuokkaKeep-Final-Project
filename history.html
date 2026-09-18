@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuokkaKeep | History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo tata"> <img src="quokkakeep_cartoon-removebg-preview.png" width="100" height="100" alt="QuokkaKeep">
+            <p>QuokkaKeep</p> </a>
+
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="keep.html">Keep</a>
+            <a href="categories.html">Categories</a>
+            <a href="history.html" class="active">History</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-header">
+            <div>
+                <p class="small-title">YOUR PAST RECORDS</p>
+                <h1>Memory Log <img src="memorylog.png" width="60" height="60" alt="Memory-log"></h1>
+                <p>Look back at your completed and overdue records.</p>
+            </div>
+        </section>
+
+        <!-- Search and filter -->
+        <section class="history-controls">
+
+            <input
+                type="text"
+                placeholder="🔍 Search history..."
+                id="historySearch"
+            >
+
+            <select>
+                <option>All Records</option>
+                <option>Completed</option>
+                <option>Overdue</option>
+            </select>
+
+            <select>
+                <option>All Months</option>
+                <option>August 2026</option>
+                <option>July 2026</option>
+                <option>June 2026</option>
+            </select>
+
+        </section>
+
+        <!-- August -->
+        <section class="history-section">
+
+            <h2>August 2026</h2>
+
+            <div class="history-card">
+
+                <div class="history-icon completed-icon">
+                    ✓
+                </div>
+
+                <div class="history-info">
+                    <h3>Returned Chemistry Book</h3>
+                    <p>Borrowed from Alex</p>
+                    <small>Completed August 12, 2026</small>
+                </div>
+
+                <span class="status completed">
+                    Completed
+                </span>
+
+            </div>
+
+            <div class="history-card">
+
+                <div class="history-icon completed-icon">
+                    ✓
+                </div>
+
+                <div class="history-info">
+                    <h3>Paid Back $10</h3>
+                    <p>Loan from Jamie</p>
+                    <small>Completed August 8, 2026</small>
+                </div>
+
+                <span class="status completed">
+                    Completed
+                </span>
+
+            </div>
+
+            <div class="history-card">
+
+                <div class="history-icon overdue-icon">
+                    !
+                </div>
+
+                <div class="history-info">
+                    <h3>Camera</h3>
+                    <p>Borrowed from Sarah</p>
+                    <small>Due August 10, 2026</small>
+                </div>
+
+                <span class="status overdue">
+                    Overdue
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- July -->
+        <section class="history-section">
+
+            <h2>July 2026</h2>
+
+            <div class="history-card">
+
+                <div class="history-icon completed-icon">
+                    ✓
+                </div>
+
+                <div class="history-info">
+                    <h3>Returned Calculator</h3>
+                    <p>Borrowed from Mark</p>
+                    <small>Completed July 28, 2026</small>
+                </div>
+
+                <span class="status completed">
+                    Completed
+                </span>
+
+            </div>
+
+            <div class="history-card">
+
+                <div class="history-icon completed-icon">
+                    ✓
+                </div>
+
+                <div class="history-info">
+                    <h3>Returned Backpack</h3>
+                    <p>Borrowed from Emma</p>
+                    <small>Completed July 20, 2026</small>
+                </div>
+
+                <span class="status completed">
+                    Completed
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p> <img src="quokkakeep_cartoon-removebg-preview.png" width="30" height="30" alt="QuokkaKeep"> QuokkaKeep © 2026 | Made with kindness by Koko</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
